@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">CadastroPessoa</string>
+    <string name="name">Nome:</string>
+    <string name="age">Idade:</string>
+    <string name="cpf">CPF:</string>
+    <string name="rg">RG:</string>
+    <string name="sex">Sexo:</string>
+    <string name="save">Salvar</string>
+    <string name="confirmar_cadastro">Confirmar cadastro</string>
+    <string name="settings">settings</string>
+    <string name="done">done</string>
+    <string name="cadastro_de_pessoa">Cadastro de pessoa</string>
+    <string name="integrantes_da_equipe">Integrantes da equipe</string>
+    <string name="registro_academico">Registro acadêmico: </string>
+</resources>
