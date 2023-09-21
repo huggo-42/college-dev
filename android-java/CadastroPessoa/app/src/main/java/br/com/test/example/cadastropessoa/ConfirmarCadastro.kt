@@ -9,7 +9,6 @@ class ConfirmarCadastro : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_confirmar_cadastro)
-        setSupportActionBar(findViewById(R.id.toolbar))
         populateInputs()
         findViewById<Button>(R.id.btnYes).setOnClickListener {
             goBackToMainActivity(RESULT_OK)

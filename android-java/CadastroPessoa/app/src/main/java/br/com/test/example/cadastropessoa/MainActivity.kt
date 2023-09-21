@@ -3,7 +3,6 @@ package br.com.test.example.cadastropessoa
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.util.Log
 import android.widget.Button
 import android.widget.ImageView
 import android.widget.TextView
@@ -41,6 +40,15 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
+    private fun clearForm() {
+        this.findViewById<TextView>(R.id.name).text = ""
+        this.findViewById<TextView>(R.id.age).text = ""
+        this.findViewById<TextView>(R.id.cpf).text = ""
+        this.findViewById<TextView>(R.id.rg).text = ""
+        this.findViewById<TextView>(R.id.sexo).text = ""
+        this.findViewById<TextView>(R.id.name).requestFocus()
+    }
+
     private fun goToConfirmarCadastro() {
         val intent = Intent(this, ConfirmarCadastro::class.java)
         val bundle = Bundle()
@@ -71,14 +79,5 @@ class MainActivity : AppCompatActivity() {
     private fun goToInfo() {
         val intent = Intent(this, Info::class.java)
         startActivity(intent)
-    }
-
-    private fun clearForm() {
-        this.findViewById<TextView>(R.id.name).text = ""
-        this.findViewById<TextView>(R.id.age).text = ""
-        this.findViewById<TextView>(R.id.cpf).text = ""
-        this.findViewById<TextView>(R.id.rg).text = ""
-        this.findViewById<TextView>(R.id.sexo).text = ""
-        this.findViewById<TextView>(R.id.name).requestFocus()
     }
 }
