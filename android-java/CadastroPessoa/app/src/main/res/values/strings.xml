@@ -12,4 +12,20 @@
     <string name="cadastro_de_pessoa">Cadastro de pessoa</string>
     <string name="integrantes_da_equipe">Integrantes da equipe</string>
     <string name="registro_academico">Registro acadêmico: </string>
+    <string name="button">button</string>
+    <string name="close_button">Close button</string>
+    <string name="unipar_logo">Unipar logo</string>
+    <string name="computer_icon">Computer icon</string>
+    <string name="sistemas_da_informa_o">Sistemas da Informação</string>
+    <string name="_4_per_odo">4° Período</string>
+    <string name="victor_huggo">Victor Huggo Guilherme de Oliveira</string>
+    <string name="nome_primeiro_integrante">Nome primeiro integrante</string>
+    <string name="nome_segundo_integrante">Nome segundo integrante</string>
+    <string name="ra_victor">00218476</string>
+    <string name="gabriel_candeias">Gabriel Candeias Barbosa</string>
+    <string name="ra_gabriel">00224331</string>
+    <string name="title_info">Integrantes da equipe</string>
+    <string name="no">No</string>
+    <string name="yes">Yes</string>
+    <string name="seus_dados_est_o_corretos">Seus dados estão corretos?</string>
 </resources>
