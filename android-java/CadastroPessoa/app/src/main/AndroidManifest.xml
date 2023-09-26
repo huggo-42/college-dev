@@ -13,10 +13,10 @@
         android:theme="@style/Theme.CadastroPessoa"
         tools:targetApi="31">
         <activity
-            android:name=".Info"
+            android:name=".InfoActivity"
             android:exported="false" />
         <activity
-            android:name=".ConfirmarCadastro"
+            android:name=".ConfirmacaoActivity"
             android:exported="false"
             android:parentActivityName=".MainActivity" />
         <activity

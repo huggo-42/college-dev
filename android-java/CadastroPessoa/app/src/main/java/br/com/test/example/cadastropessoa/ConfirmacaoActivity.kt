@@ -1,12 +1,14 @@
 package br.com.test.example.cadastropessoa
 
 import android.os.Bundle
+import android.util.Log
 import android.widget.Button
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 
-class ConfirmarCadastro : AppCompatActivity() {
+class ConfirmacaoActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
+        Log.i("ConfirmacaoActivity", "onCreate: ConfirmacaoActivity created")
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_confirmar_cadastro)
         populateInputs()
@@ -16,6 +18,11 @@ class ConfirmarCadastro : AppCompatActivity() {
         findViewById<Button>(R.id.btnNo).setOnClickListener {
             goBackToMainActivity(RESULT_CANCELED)
         }
+    }
+
+    override fun onDestroy() {
+        Log.i("ConfirmacaoActivity", "onDestroy: ConfirmacaoActivity destroyed")
+        super.onDestroy()
     }
 
     private fun populateInputs() {
