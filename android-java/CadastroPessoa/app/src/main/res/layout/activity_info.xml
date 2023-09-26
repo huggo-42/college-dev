@@ -2,6 +2,7 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
+
     android:layout_height="match_parent">
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -30,7 +31,7 @@
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
-                    app:title="Integrantes da equipe"
+                    app:title="@string/title_info"
                     app:titleTextColor="#FFFFFF" />
 
                 <ImageView
@@ -39,6 +40,7 @@
                     android:layout_height="24dp"
                     android:layout_marginEnd="9dp"
                     android:clickable="true"
+                    android:contentDescription="@string/close_button"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="@+id/toolbar"
                     app:layout_constraintTop_toTopOf="parent"
@@ -47,12 +49,73 @@
         </com.google.android.material.appbar.AppBarLayout>
     </androidx.constraintlayout.widget.ConstraintLayout>
 
+    <ImageView
+        android:id="@+id/logo_unipar"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="?attr/actionBarSize"
+        android:clickable="true"
+        android:contentDescription="@string/unipar_logo"
+        app:srcCompat="@drawable/logo_unipar" />
+
+    <LinearLayout
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/logo_unipar"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="-25dp"
+        android:layout_marginBottom="20dp"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="3dp"
+            android:layout_marginEnd="4dp"
+            android:clickable="true"
+            android:contentDescription="@string/computer_icon"
+            app:srcCompat="@drawable/computer" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/sistemas_da_informa_o"
+            android:textSize="20sp" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="3dp"
+            android:clickable="true"
+            android:contentDescription="@string/computer_icon"
+            app:srcCompat="@drawable/computer" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/subTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/title"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="-20dp"
+        android:layout_marginBottom="20dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/_4_per_odo"
+            android:textSize="18sp" />
+    </LinearLayout>
+
     <LinearLayout
         android:id="@+id/victorName"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_marginTop="?attr/actionBarSize"
+        android:layout_below="@id/subTitle"
         android:orientation="horizontal"
         android:paddingHorizontal="8dp">
 
@@ -62,10 +125,14 @@
             android:text="@string/name" />
 
         <EditText
+            android:id="@+id/victor"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:autofillHints="@string/nome_segundo_integrante"
             android:enabled="false"
-            android:text="Victor Huggo Guilherme de Oliveira" />
+            android:inputType="text"
+            android:labelFor="@id/victor"
+            android:text="@string/victor_huggo" />
     </LinearLayout>
 
     <LinearLayout
@@ -82,10 +149,14 @@
             android:text="@string/registro_academico" />
 
         <EditText
+            android:id="@+id/victor_ra"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:autofillHints="no"
             android:enabled="false"
-            android:text="00218476" />
+            android:inputType="text"
+            android:labelFor="@id/victor_ra"
+            android:text="@string/ra_victor" />
     </LinearLayout>
 
 
@@ -103,10 +174,13 @@
             android:layout_height="wrap_content"
             android:text="@string/name" />
 
-        <TextView
+        <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text=" Gabriel Candeias Barbosa" />
+            android:autofillHints="no"
+            android:enabled="false"
+            android:inputType="text"
+            android:text="@string/gabriel_candeias" />
     </LinearLayout>
 
     <LinearLayout
@@ -122,10 +196,13 @@
             android:layout_height="wrap_content"
             android:text="@string/registro_academico" />
 
-        <TextView
+        <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text=" 00224331" />
+            android:autofillHints="no"
+            android:enabled="false"
+            android:inputType="text"
+            android:text="@string/ra_gabriel" />
 
     </LinearLayout>
 </RelativeLayout>
